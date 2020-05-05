@@ -17,7 +17,7 @@ class HitungActivity : AppCompatActivity() {
             val stringLebar = editLebar.text.toString().trim()
             val stringTinggi = editTinggi.text.toString().trim()
 
-            if(stringPanjang.equals(" ")){
+            if(stringPanjang.equals("")){
                 isEmptyField= true
                 editPanjang.error = "Data Kosong"
             }
