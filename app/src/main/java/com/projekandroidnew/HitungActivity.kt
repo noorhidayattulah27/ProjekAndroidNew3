@@ -2,7 +2,9 @@ package com.projekandroidnew
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_game.*
 import kotlinx.android.synthetic.main.activity_hitung.*
+import kotlinx.android.synthetic.main.activity_game.texthasil as texthasil1
 
 class HitungActivity : AppCompatActivity() {
 
@@ -38,7 +40,7 @@ class HitungActivity : AppCompatActivity() {
                 val lebar = stringLebar.toFloat()
                 val tinggi = stringTinggi.toFloat()
 
-                textHasil.text = (panjang * lebar * tinggi).toString()
+                texthasil.text = (panjang * lebar * tinggi).toString()
 
             }
         }
