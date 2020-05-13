@@ -31,12 +31,11 @@ class GameActivity : AppCompatActivity() {
             texthasil.text = suwit(pilihanPlayer, pilihanKomputer)
             textPlayer1.text = "BATU"
             showpilihanKomputer(pilihanKomputer)
-            },2000)
+            },500)
 
         }
 
         buttonGunting.setOnClickListener{
-
             pilihanPlayer = Gunting
             pilihanKomputer = getPilihanKomputer()
             textKomputer.text=""
@@ -44,9 +43,7 @@ class GameActivity : AppCompatActivity() {
                 texthasil.text = suwit(pilihanPlayer, pilihanKomputer)
                 textPlayer1.text = "Gunting"
                 showpilihanKomputer(pilihanKomputer)
-            },2000)
-
-
+            },500)
 
         }
         buttonKertas.setOnClickListener{
@@ -57,7 +54,7 @@ class GameActivity : AppCompatActivity() {
                 texthasil.text = suwit(pilihanPlayer, pilihanKomputer)
                 textPlayer1.text = "Kertas"
                 showpilihanKomputer(pilihanKomputer)
-            },2000)
+            },500)
 
         }
 
@@ -71,18 +68,18 @@ class GameActivity : AppCompatActivity() {
 
         var hasil: String = ""
         if (PilihanPlayer == pilihanKomputer) {
-            hasil = "SERI"
+            hasil = "IMBANG"
             texthasil.setTextColor(Color.BLUE)
         }
         else if((PilihanPlayer == Batu && pilihanKomputer == Kertas) ||
             (PilihanPlayer == Gunting && pilihanKomputer == Batu) ||
             (PilihanPlayer == Kertas && pilihanKomputer == Gunting)){
 
-            hasil = "YOU LOSE"
+            hasil = "KAMU KALAH"
             texthasil.setTextColor(Color.RED)
         }
         else{
-            hasil = "YOU WIN"
+            hasil = "KAMU MENANG"
             texthasil.setTextColor(Color.GREEN)
         }
 
@@ -91,9 +88,10 @@ class GameActivity : AppCompatActivity() {
 
     fun showpilihanKomputer(pilihanKomputer: Int){
         when(pilihanKomputer){
-            1 -> textKomputer.text  = "Komputer Memilih Batu"
-            2 -> textKomputer.text  = "Komputer Memilih Gunting"
-            3 -> textKomputer.text  = "Komputer Memilih Kertas"
+            1 -> textKomputer.text  = "Komputer Memilih BATU"
+            2 -> textKomputer.text  = "Komputer Memilih KERTAS"
+            2 -> textKomputer.text  = "Komputer Memilih GUNTING"
+
         }
     }
 
